@@ -1,3 +1,131 @@
-/* Your Styles Here */
-body{
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #e9eef3;
+  background: radial-gradient(
+    1200px 600px at 50% 25%,
+    #2e3b46 0%,
+    #1b242c 55%,
+    #0f151a 100%
+  );
+}
+
+.page {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+  gap: 22px;
+}
+
+.top-rule {
+  width: min(900px, 92vw);
+  border: 0;
+  border-top: 2px dotted rgba(233, 238, 243, 0.35);
+  margin: 0;
+}
+
+.card {
+  width: min(680px, 92vw);
+  background: rgba(17, 26, 33, 0.65);
+  border: 2px solid rgba(233, 238, 243, 0.18);
+  border-radius: 18px;
+  padding: 28px 24px 24px;
+  text-align: center;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 10px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 211, 77, 0.9),
+    rgba(0, 0, 0, 0)
+  );
+  border-radius: 999px;
+  opacity: 0.9;
+}
+
+.avatar {
+  width: 108px;
+  height: 108px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  border: 3px solid rgba(233, 238, 243, 0.35);
+  background: radial-gradient(
+    circle at 30% 30%,
+    #4bb3ff 0%,
+    #2d6cdf 55%,
+    #1a2740 100%
+  );
+  display: grid;
+  place-items: center;
+}
+
+.avatar-text {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.name {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.about {
+  margin: 0 auto 18px;
+  max-width: 56ch;
+  line-height: 1.55;
+  color: rgba(233, 238, 243, 0.85);
+}
+
+.details {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 56ch;
+  text-align: left;
+  display: grid;
+  gap: 10px;
+  border-left: 3px solid rgba(75, 179, 255, 0.55);
+  padding-left: 14px;
+}
+
+.label {
+  color: rgba(233, 238, 243, 0.95);
+  font-weight: 700;
+}
+
+.details li {
+  color: rgba(233, 238, 243, 0.78);
+}
+
+@media (max-width: 420px) {
+  .card {
+    padding: 22px 18px 22px;
+  }
+  .name {
+    font-size: 24px;
+  }
+  .avatar {
+    width: 96px;
+    height: 96px;
+  }
 }
